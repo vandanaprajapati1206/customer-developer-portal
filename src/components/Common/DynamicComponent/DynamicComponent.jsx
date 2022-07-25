@@ -11,6 +11,7 @@ const DynamicComponent = ({ props, content }) => {
     requestParameters,
     note,
     remember,
+    requestHeader,
   } = props;
   return (
     <div className="page-fluid">
@@ -30,7 +31,14 @@ const DynamicComponent = ({ props, content }) => {
                 {requestLink}
               </p>
             )}
-
+            {requestHeader && (
+              <>
+                <h6 className="font-medium font-16">Request Header</h6>
+                <p className="font-regular font-14 text-white bg-primary p-10">
+                  {requestHeader}
+                </p>
+              </>
+            )}
             {queryParameters && (
               <div>
                 <h6 className="font-medium font-16">Query Parameters</h6>
