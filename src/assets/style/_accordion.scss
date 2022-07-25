@@ -1,0 +1,90 @@
+.accordion-wrapper {
+  & + * {
+    margin-top: 0.5em;
+  }
+}
+
+.accordion-item {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+  height: auto;
+  max-height: 9999px;
+}
+
+.accordion-item.collapsed {
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-title {
+  font-weight: 400;
+  cursor: pointer;
+  color: black; 
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &:hover,
+  &.open {
+    background-color: #367BF6;
+    color: white;
+  }
+
+  &.open {
+    &::after {
+      content: "";
+      border-top: 0;
+      border-bottom: 5px solid;
+    }
+  }
+}
+
+.accordion-content {
+  padding: 0.4em 1.5em;
+  background-color: #DBE2EB;
+}
+
+.accordation-child{
+  cursor: pointer;
+  &__text{
+    font-size: 12px;
+  }
+}
+
+.xx {
+  position: relative;
+}
+p {
+  font-size: 18px;
+}
+#section1 {
+  padding-top: 50px;
+  height: 500px;
+  color: white;
+  background-color: green;
+}
+#section2 {
+  padding-top: 50px;
+  height: 500px;
+  color: green;
+  background-color: white;
+}
+#section3 {
+  padding-top: 50px;
+  height: 500px;
+  color: white;
+  background-color: green;
+}
+#section4 {
+  padding-top: 50px;
+  height: 500px;
+  color: green;
+  background-color: white;
+}
+
+.navbar-fixed-top{
+  position: fixed;
+}
