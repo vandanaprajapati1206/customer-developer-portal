@@ -21,6 +21,10 @@ export const routesData = [
         title: "Guides",
         route: "guides",
       },
+      {
+        title: "Generate Refresh Token",
+        route: "refresh-token",
+      },
     ],
     route: "authentication",
   },
@@ -49,6 +53,17 @@ export const routesData = [
       },
     ],
     route: "invoices",
+  },
+  {
+    title: "CARRIER",
+    // childrens: ["Get All Carriers", "Create Request to Company", "Generate Carrier Token"],
+    childrens: [
+      {
+        title: "Create Request to Company",
+        route: "request-to-company",
+      },
+    ],
+    route: "carrier",
   },
   {
     title: "LOADS",
